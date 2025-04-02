@@ -18,62 +18,65 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1 style="text-align: center;">Ever Tide</h1>
-							<div style="padding-bottom:55%; position:relative; display:block; width: 100%">
-								<iframe width="100%" height="100%"
-								src="https://www.youtube.com/embed/kdXzNKfqDE0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" 
-								allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-							</div>
-							<p>Ever Tide is a turn-based JRPG set in a fantasy world, 
-							where the player needs to collect different items and defeat creature to discover the mistery that hide this fallen world. </p>
-							<h3>My Role</h3>
-							<p>
-								As Gameplay Programmer my role included working on the entire Combat System, UI programming, Save System and Enemy AI (pathfinding and combat).
-							</p>
-							<h4>Enemies in Overworld</h4>
-							<p>
-								In Overworld levels i implemented a simple patrolling system for enemies using Unreal built-in nav mesh and spline to trace path to following.
-								Except bosses that cannot move in Overworld, there are 2 different patrolling types:
-								<ul>
-									<li>
-										not respawnable enemies with prefixed spline path
-									</li>
-									<li>
-										respawnable enemies with randomic spawn point and spline path from a pre-configured array 
-									</li>
-								</ul>			
-							</p>
-							<h4>Combat System</h4>
-							<img src="images\(318) Ever Tide 00-02-18.png" align="center" width="100%" height="100%">
-							<p>
-								Combat System is based by a custom Game Mode that manage the course of the fight. <br>
-								In BeginPlay, it take references for each unit in the battle. <br>
-								During Tick, instead, the turn queue is determined, is managed start and end of it, and is managed lose or victory conditions. <br>
-								Enemies attack is selected randomly from a pool of different commands depending on type.   
-							</p>
-							<h5>Player Actions</h5>
-							<ul>
-								<li>
-									<strong>Attack</strong>: Simple attack based on Player's Attack stat and selected enemy's defense to calculate damage
-								</li>
-								<li>
-									<strong>Skills</strong>: Each skill has a power used to calculate damage along with the above mentioned stats.<br>
-									There are skill that modify self or enemies stats and healing stats (negative damage on itself) 
-								</li>
-								<li>
-									<strong>Items</strong>: They acts as skills but with prefixed values.
-								</li>
-								<li>
-									<strong>Run</strong>: Back to Overworld.
-								</li>
-							</ul>
-							<h4>Save System</h4>
-							<p>
-							Data are stored using save slots and Game Instance is used to transport values through varous levels. <br>
-							For saving defeated enemies and not respawn it in overworld, a randomic unique integer ID is used for every enemy asset in their Construction script.
-						</p>
+							<div class="main-card">
+								<div class="main-card-content">
+									<header>
+										<h1>Ever Tide</h1>
+									</header>
 
+									<section class="project-content">
+										<div class="video-container">
+											<iframe width="100%" height="100%"
+											src="https://www.youtube.com/embed/kdXzNKfqDE0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											referrerpolicy="strict-origin-when-cross-origin" 
+											allowfullscreen></iframe>
+										</div>
+
+										<div class="project-description">
+											<p>Ever Tide is a turn-based JRPG set in a fantasy world, 
+											where the player needs to collect different items and defeat creature to discover the mistery that hide this fallen world.</p>
+										</div>
+
+										<div class="project-role">
+											<h2>My Role</h2>
+											<p>As Gameplay Programmer my role included working on the entire Combat System, UI programming, Save System and Enemy AI (pathfinding and combat).</p>
+										</div>
+
+										<div class="project-features">
+											<h2>Enemies in Overworld</h2>
+											<p>In Overworld levels i implemented a simple patrolling system for enemies using Unreal built-in nav mesh and spline to trace path to following.
+											Except bosses that cannot move in Overworld, there are 2 different patrolling types:</p>
+											<ul>
+												<li>not respawnable enemies with prefixed spline path</li>
+												<li>respawnable enemies with randomic spawn point and spline path from a pre-configured array</li>
+											</ul>
+
+											<h2>Combat System</h2>
+											<div class="feature-image">
+												<img src="images\(318) Ever Tide 00-02-18.png" alt="Combat System">
+											</div>
+											<p>Combat System is based by a custom Game Mode that manage the course of the fight.</p>
+											<ul>
+												<li>In BeginPlay, it take references for each unit in the battle.</li>
+												<li>During Tick, instead, the turn queue is determined, is managed start and end of it, and is managed lose or victory conditions.</li>
+												<li>Enemies attack is selected randomly from a pool of different commands depending on type.</li>
+											</ul>
+
+											<h3>Player Actions</h3>
+											<ul>
+												<li><strong>Attack</strong>: Simple attack based on Player's Attack stat and selected enemy's defense to calculate damage</li>
+												<li><strong>Skills</strong>: Each skill has a power used to calculate damage along with the above mentioned stats. There are skill that modify self or enemies stats and healing stats (negative damage on itself)</li>
+												<li><strong>Items</strong>: They acts as skills but with prefixed values.</li>
+												<li><strong>Run</strong>: Back to Overworld.</li>
+											</ul>
+
+											<h2>Save System</h2>
+											<p>Data are stored using save slots and Game Instance is used to transport values through varous levels.<br>
+											For saving defeated enemies and not respawn it in overworld, a randomic unique integer ID is used for every enemy asset in their Construction script.</p>
+										</div>
+									</section>
+								</div>
+							</div>
 						</div>
 					</div>
 			</div>
